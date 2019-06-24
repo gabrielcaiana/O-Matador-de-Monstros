@@ -1,3 +1,13 @@
-body {
+/*Estilo Geral*/
+html {
     font-family: 'Open Sans', sans-serif;
+}
+#app {
+    display: flex;
+    flex-direction: column;
+}
+.panel {
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
