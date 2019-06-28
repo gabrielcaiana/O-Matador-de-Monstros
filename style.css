@@ -54,3 +54,33 @@ html {
 .lose {
     color: #d63031; 
 }
+/* Botões do jogo*/
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    padding: 10px;
+    margin: 0 10px;
+    border: 0;
+    text-transform: uppercase;
+    border-radius: 3px;
+    border-bottom: 2px solid #333;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+    color: #fff;
+}
+.attack {
+    background-color: #fdcb6e;
+}
+.attack-especial {
+    background-color: #e17055;
+}
+.heal {
+    background-color: #55efc4;
+}
+.give-up {
+    background-color: #d63031;
+}
+.new-game {
+    background-color: #74b9ff;
+}
