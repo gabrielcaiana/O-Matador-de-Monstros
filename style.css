@@ -34,10 +34,23 @@ html {
 .life-bar .life {
     background-color: #00b894;
     height: 100%;
-    /*display: flex;
-    justify-content: center;*/
+    display: flex;
+    justify-content: center;
 }
 .life-bar .danger {
     height: 100%;
     background-color: #d63031;
+}
+/*Área de resultado*/
+.result {
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.win {
+    color: #00b894;
+}
+.lose {
+    color: #d63031; 
 }

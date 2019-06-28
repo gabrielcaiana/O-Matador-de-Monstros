@@ -31,7 +31,13 @@
                     <div>{{ monsterLife }}%</div>
                 </div>
             </div>
-            <div class=" panel status">2</div>
+            <!-- estou chamando a função hasResult com a divertiva v-if
+            então esta div só será exibida se atender aos requisitos da função -->
+            <div v-if="hasResult" class=" panel result">
+                <!-- condicional para exibir se o jogador ganhou ou perdeu-->
+                <div v-if="monsterLife == 0" class="win">Você Ganhou :D</div>
+                <div v-else class="lose">Você Perdeu :(</div>
+            </div>
             <div class=" panel buttons">3</div>
             <div class=" panel logs">4</div>
         </div>
