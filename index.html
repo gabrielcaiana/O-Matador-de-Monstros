@@ -3,16 +3,37 @@
     <head>
         <meta charset="utf-8">
         <title>O Matador de Monstros</title>
-        <link rel="styleshet" href="style.css">
+        <link rel="stylesheet" href="style.css">
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="app">
-            <div id="score"></div>
-            <div id="status"></div>
-            <div id="buttons"></div>
-            <div id="logs"></div>
+            <div class=" panel scores">
+                <div class="score">
+                    <h1>Jogador</h1>
+                    <div class="life-bar">
+                        <!-- no :class estou dizendo que só será aplicada a classe danger caso o valor de playerLife seja menor que 20 -->
+                        <div class="life"
+                            :class="{danger: playerLife < 20}"
+                            :style="{width: playerLife + '%'}"> <!-- aplicando a largura do elemento playerLife e dizendo para ser tratado como % -->
+                        </div>
+                    </div>
+                    <div>{{ playerLife }}%</div>
+                </div>
+                <div class="score">
+                    <h1>Monstro</h1>
+                    <div class="life-bar">
+                        <div class="life"
+                            :class="{danger: monsterLife < 20}"
+                            :style="{width: monsterLife + '%'}"></div>
+                    </div>
+                    <div>{{ monsterLife }}%</div>
+                </div>
+            </div>
+            <div class=" panel status">2</div>
+            <div class=" panel buttons">3</div>
+            <div class=" panel logs">4</div>
         </div>
 
         <script src="app.js"></script>
