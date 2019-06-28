@@ -1,6 +1,7 @@
 new Vue ({
     el: '#app',
     data: {
+        running: false,
         playerLife: 23, // Life do jogador
         monsterLife: 0, // Life do Monstro
     },
@@ -11,6 +12,12 @@ new Vue ({
         }
     },
     methods: {
+        //criando função para iniciar o jogo, nessa função é zerada a vida do jogador e do monstro
+        startGame() {
+            this.running = true
+            this.playerLife = 100
+            this.monsterLife = 100
+        }
        
     },
     watch: {
