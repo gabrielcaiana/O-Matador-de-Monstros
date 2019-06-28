@@ -43,10 +43,18 @@
                 <!-- condicial para mostrar botões de jogo caso o mesmo esteja iniciado ou
                 mostrar botão de iniciar caso ainda não esteja-->
                 <template v-if="running">
-                        <button class="btn attack">Ataque</button>
-                        <button class="btn attack-especial">Ataque especial</button>
+                    <!-- chamando função attack com o valor false para não aplicar especial -->
+                        <button @click="attack(false)"
+                            class="btn attack">Ataque
+                        </button>
+                    <!-- chamando função attack com o valor true para  aplicar especial -->
+                        <button @click="attack(true)"
+                            class="btn attack-especial">Ataque especial
+                        </button>
                         <button class="btn heal">Curar</button>
-                        <button @click="running = false" class="btn give-up">Desistir</button>
+                        <button @click="running = false"
+                            class="btn give-up">Desistir
+                        </button>
                 </template>
                 <button @click="startGame" v-else class="btn new-game">Iniciar novo jogo</button>
             </div>
