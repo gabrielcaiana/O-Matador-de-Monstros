@@ -84,3 +84,30 @@ html {
 .new-game {
     background-color: #74b9ff;
 }
+
+/* Área de log*/
+.logs ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.logs ul li {
+    display: flex;
+    justify-content: center;
+    margin: 4px 0;
+    padding: 3px 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+.player {   
+    background-color: #55efc4;
+    color: #fff;
+}
+.monster {
+    background-color: #ff7675;
+    color: #fff;
+}
