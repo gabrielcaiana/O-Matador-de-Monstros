@@ -21,7 +21,7 @@ new Vue ({
         // Função attack e especial
         attack(especial) {
             // Chamando a função para causar dano e deixando como false o especial para apenas dar dano basico
-            this.hurt('playerLife', 7,12, false)
+            this.hurt('playerLife', 8,20, false)
             this.hurt('monsterLife' ,5,10, true) // o monstro pode estar sujeito a um ataque especial então habilito o true
         },
         // função que armazena a lógica de ataque para ver se o ataque é especial ou não    
@@ -33,6 +33,16 @@ new Vue ({
             this.playerLife - o dano que foi calculado, se essa diferença for negativa o maior numero dos dois
             será o 0 e se este numero for maior do que 0 ele irá permanecer */
             this[prop] = Math.max(this[prop] - hurt, 0)
+        },
+        //função para curar e atacar
+        healAndHurt() {
+            this.heal(10,15)
+            this.hurt('playerLife', 7,13,false)
+        },
+        // Função para curar o jogador
+        heal(min, max) {
+            const heal = this.getRandom(min,max) // função para gerar um valor randomico na cura
+            this.playerLife = Math.min(this.playerLife + heal,100) // esta função ira pegar sempre o menor valor dos dois
         },
         // Função para gerar valores aleatórios entre dois numeros
         getRandom(min, max) {
